@@ -17,6 +17,8 @@ function theme_scripts() {
 }
 ```
 
+`yarn run watch` to start webpack.
+
 Below are the default README for Timber's [Starter Theme](https://github.com/timber/starter-theme).
 
 # The Timber Starter Theme
