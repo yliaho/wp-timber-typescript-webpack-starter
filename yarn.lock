@@ -3489,6 +3489,10 @@ nanomatch@^1.2.9:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
+nanoreset@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/nanoreset/-/nanoreset-1.2.0.tgz#1770bfa596055e3aa6bf0c5b5c2edc2da664488f"
+
 neo-async@^2.5.0:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.5.0.tgz#76b1c823130cca26acfbaccc8fbaf0a2fa33b18f"

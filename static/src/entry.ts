@@ -1,3 +1,4 @@
-import './index.scss'
+import './styles/index.scss'
+import { fireRouteEvents } from './'
 
-console.log('fruits')
+fireRouteEvents()
