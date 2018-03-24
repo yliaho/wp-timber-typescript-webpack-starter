@@ -1,7 +1,27 @@
+# wp-timber-typescript-webpack-starter
+
+This is essentially Timber's [Starter Theme](https://github.com/timber/starter-theme), but with webpack.
+
+With this starter you can;
+
+* Use Typescript and Sass.
+* Compile to Javascript -> bundle the whole source into `site.bundle.js`
+* Extract compiled .scss files to `main.css`
+
+We include the bundles in `functions.php` like this:
+
+```php
+function theme_scripts() {
+	wp_enqueue_style( 'themestyle', get_template_directory_uri() . '/static/main.css' );
+	wp_enqueue_script( 'themescript', get_template_directory_uri() . '/static/site.bundle.js', array(), true );
+}
+```
+
+Below are the default README for Timber's [Starter Theme](https://github.com/timber/starter-theme).
 
 # The Timber Starter Theme
 
-The "_s" for Timber: a dead-simple theme that you can build from. The primary purpose of this theme is to provide a file structure rather than a framework for markup or styles. Configure your Sass, scripts, and task runners however you would like!
+The "\_s" for Timber: a dead-simple theme that you can build from. The primary purpose of this theme is to provide a file structure rather than a framework for markup or styles. Configure your Sass, scripts, and task runners however you would like!
 
 [![Build Status](https://travis-ci.org/timber/starter-theme.svg)](https://travis-ci.org/timber/starter-theme)
 
@@ -9,11 +29,11 @@ The "_s" for Timber: a dead-simple theme that you can build from. The primary pu
 
 Install this theme as you would any other, and be sure the Timber plugin is activated. But hey, let's break it down into some bullets:
 
-1. Make sure you have installed the plugin for the [Timber Library](https://wordpress.org/plugins/timber-library/) (and Advanced Custom Fields - they [play quite nicely](https://timber.github.io/docs/guides/acf-cookbook/#nav) together). 
-2. Download the zip for this theme (or clone it) and move it to `wp-content/themes` in your WordPress installation. 
-3. Rename the folder to something that makes sense for your website (generally no spaces and all lowercase). You could keep the name `timber-starter-theme` but the point of a starter theme is to make it your own!
-4. Activate the theme in Appearance >  Themes.
-5. Do your thing! And read [the docs](https://github.com/jarednova/timber/wiki).
+1.  Make sure you have installed the plugin for the [Timber Library](https://wordpress.org/plugins/timber-library/) (and Advanced Custom Fields - they [play quite nicely](https://timber.github.io/docs/guides/acf-cookbook/#nav) together).
+2.  Download the zip for this theme (or clone it) and move it to `wp-content/themes` in your WordPress installation.
+3.  Rename the folder to something that makes sense for your website (generally no spaces and all lowercase). You could keep the name `timber-starter-theme` but the point of a starter theme is to make it your own!
+4.  Activate the theme in Appearance > Themes.
+5.  Do your thing! And read [the docs](https://github.com/jarednova/timber/wiki).
 
 ## What's here?
 
@@ -32,4 +52,3 @@ The [main Timber Wiki](https://github.com/jarednova/timber/wiki) is super great,
 * [Timber and Twig Reignited My Love for WordPress](https://css-tricks.com/timber-and-twig-reignited-my-love-for-wordpress/) on CSS-Tricks
 * [A real live Timber theme](https://github.com/laras126/yuling-theme).
 * [Timber Video Tutorials](http://timber.github.io/timber/#video-tutorials) and [an incomplete set of screencasts](https://www.youtube.com/playlist?list=PLuIlodXmVQ6pkqWyR6mtQ5gQZ6BrnuFx-) for building a Timber theme from scratch.
-
