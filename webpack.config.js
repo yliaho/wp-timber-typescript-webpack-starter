@@ -21,6 +21,14 @@ module.exports = {
     rules: [
       { test: /\.tsx?$/, loader: 'ts-loader' },
       {
+        test: /\.(ttf|otf|woff|woff2)$/,
+        use: [
+          {
+            loader: 'url-loader'
+          }
+        ]
+      },
+      {
         test: /\.scss$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
       }
